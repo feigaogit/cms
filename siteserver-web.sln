@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29318.209
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiteServer.Utils", "SiteServer.Utils\SiteServer.Utils.csproj", "{2176D8BA-5F57-4C56-8E21-A09011517AE2}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiteServer.BackgroundPages", "SiteServer.BackgroundPages\SiteServer.BackgroundPages.csproj", "{6AA1713A-3B77-4B20-B8C7-FCB6DE556F64}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiteServer.API", "SiteServer.Web\SiteServer.API.csproj", "{69C00F60-F28A-4CBC-B1A4-2DB73BB97471}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiteServer.Service", "SiteServer.Service\SiteServer.Service.csproj", "{7FB423F4-99D7-44FF-A2C4-2A772E848EA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{69C00F60-F28A-4CBC-B1A4-2DB73BB97471}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69C00F60-F28A-4CBC-B1A4-2DB73BB97471}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69C00F60-F28A-4CBC-B1A4-2DB73BB97471}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FB423F4-99D7-44FF-A2C4-2A772E848EA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FB423F4-99D7-44FF-A2C4-2A772E848EA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FB423F4-99D7-44FF-A2C4-2A772E848EA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FB423F4-99D7-44FF-A2C4-2A772E848EA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

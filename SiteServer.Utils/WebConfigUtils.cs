@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Text;
 using System.Xml;
 using Datory;
@@ -297,7 +298,7 @@ namespace SiteServer.Utils
                 var doc = new XmlDocument();
 
                 var configFile = PathUtils.Combine(PhysicalApplicationPath, WebConfigFileName);
-
+               
                 doc.Load(configFile);
 
                 var appSettings = doc.SelectSingleNode("configuration/appSettings");

@@ -131,6 +131,7 @@
     <Compile Include="Base64Decoder.cs" />
     <Compile Include="Base64Encoder.cs" />
     <Compile Include="CacheUtils.cs" />
+    <Compile Include="ConfigHelper.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="ControlUtils.cs" />
     <Compile Include="ConvertHelper.cs" />
@@ -193,6 +194,7 @@
     <Compile Include="LitJson\JsonWriter.cs" />
     <Compile Include="LitJson\Lexer.cs" />
     <Compile Include="LitJson\ParserToken.cs" />
+    <Compile Include="Log\WriteLog.cs" />
     <Compile Include="MessageUtils.cs" />
     <Compile Include="AttackUtils.cs" />
     <Compile Include="PageUtils.cs" />
@@ -230,6 +232,7 @@
     <Compile Include="Rss\Shared\RssElement.cs" />
     <Compile Include="Rss\Shared\RssEnumerators.cs" />
     <Compile Include="Serializer.cs" />
+    <Compile Include="SettingHelper.cs" />
     <Compile Include="SiteFilesAssets.cs" />
     <Compile Include="SiteServerAssets.cs" />
     <Compile Include="StringUtils.cs" />
