@@ -1,4 +1,4 @@
-@using SiteServer.CMS.Pages
+﻿@using SiteServer.CMS.Pages
 <!DOCTYPE html>
 <html style="overflow: hidden;">
 
@@ -46,7 +46,7 @@
           </ul>
           <div v-if="isDesktop" class="menu-extras">
             <ul class="navigation-menu nav navbar-nav navbar-right float-right">
-              <li v-if="newVersion" class="has-submenu dropdown">
+              <li v-if="newVersion" class="has-submenu dropdown" style="display:none">
                 <a href="javascript:;">
                   <i class="ion-email-unread text-warning"></i>
                 </a>
