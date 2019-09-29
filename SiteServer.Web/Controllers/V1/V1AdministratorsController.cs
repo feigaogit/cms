@@ -197,13 +197,23 @@ namespace SiteServer.API.Controllers.V1
         {
             try
             {
-                var request = new AuthenticatedRequest();
-                var adminInfo = request.IsAdminLoggin ? request.AdminInfo : null;
-                request.AdminLogout();
+                //不是单点登录，正常退出，否则返回登录地址
+                if (!ConfigHelper.GetConfigBool("IsSso"))
+                {
+                    var request = new AuthenticatedRequest();
+                    var adminInfo = request.IsAdminLoggin ? request.AdminInfo : null;
+                    request.AdminLogout();
+
+                    return Ok(new
+                    {
+                        Value = adminInfo
+                    });
+                }
 
                 return Ok(new
                 {
-                    Value = adminInfo
+                    Sso = true,
+                    Value = ConfigHelper.GetConfigString("SSOUrl")
                 });
             }
             catch (Exception ex)

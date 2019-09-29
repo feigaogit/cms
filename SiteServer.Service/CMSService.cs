@@ -144,7 +144,7 @@ namespace SiteServer.Service
 
                         addList.Add(new AdministratorInfo
                         {
-                            UserName = account.Id,
+                            UserName = account.Id.ToLower(),
                             Password = "123qwe",
                             PasswordFormat = EPasswordFormatUtils.GetValue(EPasswordFormat.Encrypted),
                             CreationDate = nowTime,
