@@ -5,7 +5,7 @@
 
     <head>
       <meta charset="utf-8">
-      <title>SiteServer CMS 数据库升级向导</title>
+      <title>网站管理平台 数据库升级向导</title>
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <link href="./assets/icons/favicon.png" rel="icon" type="image/png">
       <link href="./assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -27,10 +27,10 @@
 
         <div id="main" class="card-box">
           <h4 class="text-dark  header-title m-t-0">
-            SiteServer CMS 数据库升级向导
+            网站管理平台 数据库升级向导
           </h4>
           <p class="text-muted m-b-25 font-13">
-            欢迎来到SiteServer CMS 数据库升级向导！
+            欢迎来到网站管理平台 数据库升级向导！
           </p>
 
           <ctrl:alerts runat="server" />
@@ -51,7 +51,7 @@
             </ul>
 
             <div class="jumbotron">
-              <h4 class="display-5">欢迎来到SiteServer CMS 数据库升级向导！</h4>
+              <h4 class="display-5">欢迎来到网站管理平台 数据库升级向导！</h4>
               <p class="lead">
                 升级向导将逐一检查数据库字段、将数据库结构更新至最新版本。
               </p>
@@ -104,13 +104,13 @@
             <div class="alert alert-success" role="alert">
               <h4 class="alert-heading">数据库升级完成！</h4>
               <p>
-                恭喜，您已经完成了 SiteServer CMS 数据库的升级
+                恭喜，您已经完成了 网站管理平台 数据库的升级
                 <a class="btn btn-success m-l-5" href="<%=AdminUrl%>">进入后台</a>
               </p>
               <hr>
               <p class="mb-0">
                 获取更多使用帮助请访问
-                <a href="http://docs.siteserver.cn" target="_blank">SiteServer CMS 文档中心</a>
+                <a href="http://docs.siteserver.cn" target="_blank">网站管理平台 文档中心</a>
               </p>
             </div>
           </div>

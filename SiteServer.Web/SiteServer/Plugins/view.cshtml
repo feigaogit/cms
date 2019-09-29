@@ -4,7 +4,7 @@
     <div class="wid-icon-info" style="margin-left: 120px;">
       <p class="text-muted m-b-5 font-13"> {{ pluginInfo.pluginId || package.id }}.{{ releaseInfo.version ||
         package.version }} </p>
-      <h4 class="m-t-0 m-b-5 counter">{{ pluginInfo.title || package.title }}</h4>
+      <h4 class="m-t-0 m-b-5 counter">{{ pluginInfo.title.replace('SiteServer CMS', '网站管理平台') || package.title.replace('SiteServer CMS', '网站管理平台') }}</h4>
       <hr />
       <div class="mt-2 mb-2">
         <span class="text-dark"> 价格： <span v-if="pluginInfo.price" class="text-primary">{{ pluginInfo.price.toFixed(2)
@@ -26,7 +26,7 @@
           </span>
         </span>
       </div>
-      <p class="mt-2 mb-2"> {{ pluginInfo.summary || package.summary }} </p>
+      <p class="mt-2 mb-2"> {{ pluginInfo.summary.replace('SiteServer CMS', '网站管理平台') || package.summary.replace('SiteServer CMS', '网站管理平台') }} </p>
       <span v-if="installed && isShouldUpdate" class="text-warning mt-2 mb-0"> 系统检测到插件新版本，当前版本：{{ installedVersion
         }}，新版本：{{ releaseInfo.version }} </span>
       <div class="mt-2 mb-2">
@@ -54,10 +54,10 @@
   </div>
   <table class="table m-0 m-t-25">
     <tbody>
-      <tr>
+      @*<tr>
         <th scope="row">版本发行说明</th>
         <td>{{ releaseInfo.releaseNotes || package.releaseNotes }}</td>
-      </tr>
+      </tr>*@
       <tr>
         <th scope="row">更新日期</th>
         <td>{{ releaseInfo.published || package.published }}</td>
@@ -70,25 +70,25 @@
         <th scope="row">版本号</th>
         <td>{{ releaseInfo.version || package.version }}</td>
       </tr>
-      <tr v-if="userInfo">
+      @*<tr v-if="userInfo">
         <th scope="row">作者</th>
         <td>{{ userInfo.displayName || userInfo.userName }}</td>
-      </tr>
+      </tr>*@
       <tr v-if="pluginInfo">
         <th scope="row">标签</th>
         <td>{{ pluginInfo.tags }}</td>
       </tr>
-      <tr v-if="pluginInfo">
+      @*<tr v-if="pluginInfo">
         <th scope="row">插件项目链接</th>
         <td>
           <a :style="{ display: pluginInfo.projectUrl ? '' : 'none' }" target="_blank" :href="pluginInfo.projectUrl">
             {{ pluginInfo.projectUrl }} </a>
         </td>
-      </tr>
-      <tr v-if="pluginInfo">
+      </tr>*@
+      @*<tr v-if="pluginInfo">
         <th scope="row">版权</th>
         <td>{{ pluginInfo.copyright }}</td>
-      </tr>
+      </tr>*@
     </tbody>
   </table>
 </div>

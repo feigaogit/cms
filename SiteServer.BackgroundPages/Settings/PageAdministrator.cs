@@ -22,7 +22,7 @@ namespace SiteServer.BackgroundPages.Settings
 
         public Repeater RptContents;
         public Pager PgContents;
-        
+
         public Button BtnLock;
         public Button BtnUnLock;
         public Button BtnDelete;
@@ -253,7 +253,9 @@ namespace SiteServer.BackgroundPages.Settings
 
             if (AuthRequest.AdminName != userName)
             {
-                ltlActions.Text = $@"
+                ltlActions.Text = ConfigHelper.GetConfigBool("IsSso") ? $@"
+<a class=""m-r-5"" href=""javascript:;"" onclick=""{ModalPermissionsSet.GetOpenWindowString(userName)}"">权限设置</a>
+" : $@"
 <a class=""m-r-5"" href=""adminProfile.cshtml?pageType=admin&userId={userId}"">修改资料</a>
 <a class=""m-r-5"" href=""adminPassword.cshtml?pageType=admin&userId={userId}"">更改密码</a>
 <a class=""m-r-5"" href=""javascript:;"" onclick=""{ModalPermissionsSet.GetOpenWindowString(userName)}"">权限设置</a>

@@ -5,7 +5,7 @@
 
     <head>
       <meta charset="utf-8">
-      <title>SiteServer CMS 安装向导</title>
+      <title>网站管理平台 安装向导</title>
       <!--#include file="../inc/head.html"-->
       <link href="../assets/showLoading/css/showLoading.css" rel="stylesheet" />
       <script type="text/javascript" src="../assets/showLoading/js/jquery.showLoading.js"></script>
@@ -18,11 +18,11 @@
 
         <div id="main" class="card-box">
           <h4 class="text-dark  header-title m-t-0">
-            SiteServer CMS
+            网站管理平台
             <asp:Literal ID="LtlVersionInfo" runat="server"></asp:Literal> 安装向导
           </h4>
           <p class="text-muted m-b-25 font-13">
-            欢迎来到SiteServer CMS 安装向导！只要进行以下几步操作，你就可以开始使用强大且可扩展的CMS系统了。
+            欢迎来到网站管理平台 安装向导！只要进行以下几步操作，你就可以开始使用强大且可扩展的CMS系统了。
           </p>
 
           <ctrl:alerts runat="server" />
@@ -50,7 +50,7 @@
 
             <div class="form-group">
               <label class="col-form-label">
-                SiteServer CMS 开源协议（GPL-3.0）
+                网站管理平台 开源协议（GPL-3.0）
                 <img src="../Pic/Installer/printerIcon.gif">
                 <a href="eula.html" target="new"> 可打印版本</a>
               </label>
@@ -415,13 +415,13 @@
             <div class="alert alert-success" role="alert">
               <h4 class="alert-heading">安装完成！</h4>
               <p>
-                恭喜，您已经完成了 SiteServer CMS 的安装
+                恭喜，您已经完成了 网站管理平台 的安装
                 <asp:Literal id="LtlGo" runat="server" />
               </p>
               <hr>
               <p class="mb-0">
                 获取更多使用帮助请访问
-                <a href="http://docs.siteserver.cn" target="_blank">SiteServer CMS 文档中心</a>
+                <a href="http://docs.siteserver.cn" target="_blank">网站管理平台 文档中心</a>
               </p>
             </div>
 

@@ -29,7 +29,7 @@ namespace SiteServer.BackgroundPages.Settings
                 new KeyValuePair<string, string>("访问IP", PageUtils.GetIpAddress()),
                 new KeyValuePair<string, string>(".NET 框架", SystemManager.TargetFramework),
                 new KeyValuePair<string, string>(".NET CLR 版本", SystemManager.EnvironmentVersion),
-                new KeyValuePair<string, string>("SiteServer CMS 版本", SystemManager.ProductVersion),
+                new KeyValuePair<string, string>("网站管理平台 版本", SystemManager.ProductVersion),
                 new KeyValuePair<string, string>("SiteServer.Plugin 版本", SystemManager.PluginVersion),
                 new KeyValuePair<string, string>("最近升级时间", DateUtils.GetDateAndTimeString(ConfigManager.Instance.UpdateDate)),
                 new KeyValuePair<string, string>("数据库类型", WebConfigUtils.DatabaseType.Value),

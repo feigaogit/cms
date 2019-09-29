@@ -18,30 +18,30 @@
           </label>
           <asp:RadioButtonList ID="RblInstallType" class="radio radio-primary" RepeatDirection="Horizontal" AutoPostBack="true" OnSelectedIndexChanged="RblInstallType_SelectedIndexChanged"
             runat="server"></asp:RadioButtonList>
-          <small class="form-text text-muted">手动升级 SiteServer CMS 可以下载升级包并手动上传，也可以设置指定的版本号通过系统自动下载并升级</small>
+          <small class="form-text text-muted">手动升级 网站管理平台 可以下载升级包并手动上传，也可以设置指定的版本号通过系统自动下载并升级</small>
         </div>
 
         <asp:PlaceHolder id="PhUpload" runat="server">
           <div class="form-group m-l-15 m-r-15">
             <label class="col-form-label">
-              上传 SiteServer CMS 升级包
+              上传 网站管理平台 升级包
               <asp:RequiredFieldValidator ControlToValidate="HifFile" errorMessage=" *" foreColor="red" display="Dynamic" runat="server"
               />
             </label>
             <input type="file" id="HifFile" class="form-control" runat="server" />
-            <small class="form-text text-muted">SiteServer CMS 升级包为 SS.CMS.&lt;version&gt;.nupkg的文件</small>
+            <small class="form-text text-muted">网站管理平台 升级包为 SS.CMS.&lt;version&gt;.nupkg的文件</small>
           </div>
         </asp:PlaceHolder>
 
         <asp:PlaceHolder id="PhVersion" visible="false" runat="server">
           <div class="form-group m-l-15 m-r-15">
             <label class="col-form-label">
-              指定需要升级的SiteServer CMS 版本号
+              指定需要升级的网站管理平台 版本号
               <asp:RequiredFieldValidator ControlToValidate="TbVersion" errorMessage=" *" foreColor="red" display="Dynamic" runat="server"
               />
             </label>
             <asp:TextBox id="TbVersion" class="form-control" runat="server" />
-            <small class="form-text text-muted">用以确定需要升级到具体的 SiteServer CMS 版本</small>
+            <small class="form-text text-muted">用以确定需要升级到具体的 网站管理平台 版本</small>
           </div>
         </asp:PlaceHolder>
 

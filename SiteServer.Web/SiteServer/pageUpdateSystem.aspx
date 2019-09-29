@@ -5,7 +5,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>SiteServer CMS 升级向导</title>
+  <title>网站管理平台 升级向导</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="./assets/icons/favicon.png" rel="icon" type="image/png">
   <link href="./assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -31,10 +31,10 @@
 
     <div class="card-box">
       <h4 class="text-dark  header-title m-t-0">
-        SiteServer CMS 升级向导
+        网站管理平台 升级向导
       </h4>
       <p class="text-muted m-b-25 font-13">
-        欢迎来到SiteServer CMS 升级向导！
+        欢迎来到网站管理平台 升级向导！
       </p>
 
       <ctrl:alerts runat="server" />
@@ -63,7 +63,7 @@
         <div class="panel panel-border panel-primary">
           <div class="panel-heading">
             <h3 class="panel-title">检查更新</h3>
-            <p class="panel-sub-title font-13 text-muted">检查 SiteServer CMS 新版本</p>
+            <p class="panel-sub-title font-13 text-muted">检查 网站管理平台 新版本</p>
           </div>
           <div class="panel-body">
 
@@ -84,7 +84,7 @@
             <div v-bind:style="{ display: package && isShouldUpdate ? '' : 'none' }" class="table-responsive" style="display: none">
 
               <div class="alert alert-success">
-                发现 SiteServer CMS 新版本，请选中复选框后点击下一步开始升级
+                发现 网站管理平台 新版本，请选中复选框后点击下一步开始升级
               </div>
 
               <table class="table tablesaw table-hover m-0">
@@ -153,13 +153,13 @@
         <div class="alert alert-success" role="alert">
           <h4 class="alert-heading">升级完成！</h4>
           <p>
-            恭喜，您已经完成了 SiteServer CMS 系统的升级，请点击按钮进入数据库升级向导
+            恭喜，您已经完成了 网站管理平台 系统的升级，请点击按钮进入数据库升级向导
             <a class="btn btn-success m-l-5" href="pageSyncDatabase.aspx">进入数据库升级向导</a>
           </p>
           <hr>
           <p class="mb-0">
             获取更多使用帮助请访问
-            <a href="http://docs.siteserver.cn" target="_blank">SiteServer CMS 文档中心</a>
+            <a href="http://docs.siteserver.cn" target="_blank">网站管理平台 文档中心</a>
           </p>
         </div>
 

@@ -58,7 +58,7 @@ namespace SiteServer.CMS.StlParser.StlEntity
 
                 if (StringUtils.EqualsIgnoreCase(PoweredBy, attributeName))//支持信息
                 {
-                    parsedContent = @"Powered by <a href=""http://www.siteserver.cn"" target=""_blank"">SiteServer CMS</a>";
+                    parsedContent = @"Powered by <a href=""http://www.siteserver.cn"" target=""_blank"">网站管理平台</a>";
                 }
                 else if (StringUtils.EqualsIgnoreCase(RootUrl, attributeName))//系统根目录地址
                 {

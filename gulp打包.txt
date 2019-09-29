@@ -1,0 +1,11 @@
+一、Visual Studio 切换解决方案配置到Release，编译
+二、安装NodeJs
+三、打开命令行，运行 npm install gulp -g
+四、命令行，转到根目录，运行 npm install
+五、命令行，运行 gulp build
+六、命令行，运行 gulp zip
+
+如果已经生成过安装包：
+
+一、命令行，转到根目录，运行 gulp build
+二、命令行，运行 gulp zip

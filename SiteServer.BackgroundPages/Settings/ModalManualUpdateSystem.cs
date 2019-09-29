@@ -21,7 +21,7 @@ namespace SiteServer.BackgroundPages.Settings
 
         public static string GetOpenWindowString()
         {
-            return LayerUtils.GetOpenScript("手动升级 SiteServer CMS 版本", PageUtils.GetSettingsUrl(nameof(ModalManualUpdateSystem), null), 560, 430);
+            return LayerUtils.GetOpenScript("手动升级 网站管理平台 版本", PageUtils.GetSettingsUrl(nameof(ModalManualUpdateSystem), null), 560, 430);
         }
 
         public void Page_Load(object sender, EventArgs e)
@@ -57,11 +57,11 @@ namespace SiteServer.BackgroundPages.Settings
 	        //string errorMessage;
 	        //if (!SystemManager.GetPackageAndUpdate(TbVersion.Text, out errorMessage))
 	        //{
-	        //    FailMessage($"手动升级 SiteServer CMS 版本失败：{errorMessage}");
+	        //    FailMessage($"手动升级 网站管理平台 版本失败：{errorMessage}");
 	        //    return;
 	        //}
 
-	        AuthRequest.AddAdminLog($"手动升级 SiteServer CMS 版本：{TbVersion.Text}");
+	        AuthRequest.AddAdminLog($"手动升级 网站管理平台 版本：{TbVersion.Text}");
 
 	        LayerUtils.CloseAndRedirect(Page, PageUtils.GetAdminUrl(PageUtils.Combine("plugins/manage.cshtml")));
 	    }
@@ -90,7 +90,7 @@ namespace SiteServer.BackgroundPages.Settings
 
 	        ZipUtils.ExtractZip(localFilePath, directoryPath);
 
-	        AuthRequest.AddAdminLog("手动升级 SiteServer CMS 版本：" + idAndVersion);
+	        AuthRequest.AddAdminLog("手动升级 网站管理平台 版本：" + idAndVersion);
 
 	        LayerUtils.CloseAndRedirect(Page, PageUtils.GetAdminUrl(PageUtils.Combine("plugins/manage.cshtml")));
 	    }
