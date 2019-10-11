@@ -36,7 +36,7 @@ namespace SiteServer.BackgroundPages.Ajax
             });
         }
 
-        public static string GetCreateSiteParameters(int siteId, bool isImportContents, bool isImportTableStyles, string siteTemplateDir, string onlineTemplateName, string userKeyPrefix)
+        public static string GetCreateSiteParameters(int siteId, bool isImportContents, bool isImportTableStyles, string siteTemplateDir, string onlineTemplateName,string onlineTemplateUrl, string userKeyPrefix)
         {
             return TranslateUtils.NameValueCollectionToString(new NameValueCollection
             {
@@ -45,6 +45,7 @@ namespace SiteServer.BackgroundPages.Ajax
                 {"isImportTableStyles", isImportTableStyles.ToString()},
                 {"siteTemplateDir", siteTemplateDir},
                 {"onlineTemplateName", onlineTemplateName},
+                {"onlineTemplateUrl", onlineTemplateUrl},
                 {"userKeyPrefix", userKeyPrefix}
             });
         }
@@ -68,6 +69,7 @@ namespace SiteServer.BackgroundPages.Ajax
                 var isImportTableStyles = TranslateUtils.ToBool(Request.Form["isImportTableStyles"]);
                 var siteTemplateDir = Request.Form["siteTemplateDir"];
                 var onlineTemplateName = Request.Form["onlineTemplateName"];
+                var onlineTemplateUrl = Request.Form["onlineTemplateUrl"];//模板文件地址
 
                 if (!string.IsNullOrEmpty(siteTemplateDir))
                 {
@@ -75,7 +77,7 @@ namespace SiteServer.BackgroundPages.Ajax
                 }
                 else if (!string.IsNullOrEmpty(onlineTemplateName))
                 {
-                    retval = CreateSiteByOnlineTemplateName(siteId, isImportContents, isImportTableStyles, onlineTemplateName, userKeyPrefix, request.AdminName);
+                    retval = CreateSiteByOnlineTemplateName(siteId, isImportContents, isImportTableStyles, onlineTemplateName, onlineTemplateUrl, userKeyPrefix, request.AdminName);
                 }
                 else
                 {
@@ -146,7 +148,7 @@ namespace SiteServer.BackgroundPages.Ajax
             return retval;
         }
 
-        public NameValueCollection CreateSiteByOnlineTemplateName(int siteId, bool isImportContents, bool isImportTableStyles, string onlineTemplateName, string userKeyPrefix, string administratorName)
+        public NameValueCollection CreateSiteByOnlineTemplateName(int siteId, bool isImportContents, bool isImportTableStyles, string onlineTemplateName,string onlineTemplateUrl, string userKeyPrefix, string administratorName)
         {
             var cacheTotalCountKey = userKeyPrefix + CacheTotalCount;
             var cacheCurrentCountKey = userKeyPrefix + CacheCurrentCount;
@@ -166,7 +168,8 @@ namespace SiteServer.BackgroundPages.Ajax
 
                 var filePath = PathUtility.GetSiteTemplatesPath($"T_{onlineTemplateName}.zip");
                 FileUtils.DeleteFileIfExists(filePath);
-                var downloadUrl = OnlineTemplateManager.GetDownloadUrl(onlineTemplateName);
+                //var downloadUrl = OnlineTemplateManager.GetDownloadUrl(onlineTemplateName);
+                var downloadUrl = OnlineTemplateManager.GetDownloadUrlByUrl(onlineTemplateUrl);
                 WebClientUtils.SaveRemoteFileToLocal(downloadUrl, filePath);
 
                 CacheUtils.Insert(cacheCurrentCountKey, "2");

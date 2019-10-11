@@ -136,6 +136,9 @@ namespace SiteServer.API.Controllers.Pages.Settings
                 var tableHandWrite = request.GetPostString("tableHandWrite");
                 var isImportContents = request.GetPostBool("isImportContents");
                 var isImportTableStyles = request.GetPostBool("isImportTableStyles");
+                var channelId = request.GetPostString("channelId");
+                var contentId = request.GetPostString("contentId");
+                var createTemplateUrl = request.GetPostString("createTemplateUrl");
 
                 if (!isRoot)
                 {
@@ -219,7 +222,7 @@ namespace SiteServer.API.Controllers.Pages.Settings
                 }
 
                 var redirectUrl = PageProgressBar.GetCreateSiteUrl(siteId,
-                    isImportContents, isImportTableStyles, siteTemplateDir, onlineTemplateName, StringUtils.Guid());
+                    isImportContents, isImportTableStyles, siteTemplateDir, onlineTemplateName, createTemplateUrl, StringUtils.Guid());
 
                 return Ok(new
                 {

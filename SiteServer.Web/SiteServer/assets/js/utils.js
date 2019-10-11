@@ -9,6 +9,12 @@ var $apiCloud = axios.create({
   withCredentials: true
 });
 
+var $urlCloudCustom = 'http://www.zhijiao361.com';
+var $apiCloudCustom = axios.create({
+    baseURL: $urlCloudCustom + '/template/channels/453.html',
+    withCredentials: false
+});
+
 var utils = {
   getQueryString: function (name) {
     var result = location.search.match(new RegExp("[\?\&]" + name + "=([^\&]+)", "i"));

@@ -34,7 +34,7 @@ namespace SiteServer.CMS.Core
 
                         while (ie.MoveNext())
                         {
-                            var childNode = (XmlNode) ie.Current;
+                            var childNode = (XmlNode)ie.Current;
                             if (childNode == null) continue;
 
                             var nodeName = childNode.Name;
@@ -90,6 +90,11 @@ namespace SiteServer.CMS.Core
         public static string GetDownloadUrl(string name)
         {
             return $"https://api.siteserver.cn/downloads/template/{name}";
+        }
+
+        public static string GetDownloadUrlByUrl(string url)
+        {
+            return $"http://www.zhijiao361.com{url}";
         }
     }
 }
