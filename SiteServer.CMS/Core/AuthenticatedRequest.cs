@@ -523,8 +523,11 @@ namespace SiteServer.CMS.Core
             else if (checkDatabaseVersion && ConfigManager.Instance.IsInitialized &&
                      ConfigManager.Instance.DatabaseVersion != SystemManager.ProductVersion)
             {
-                redirect = true;
-                redirectUrl = PageUtils.GetAdminUrl("pageSyncDatabase.aspx");
+
+                //不升级
+                //redirect = true;
+                //redirectUrl = PageUtils.GetAdminUrl("pageSyncDatabase.aspx");
+                return null;
             }
             else if (checkLogin && (!IsAdminLoggin || AdminInfo == null || AdminInfo.IsLockedOut))
             {

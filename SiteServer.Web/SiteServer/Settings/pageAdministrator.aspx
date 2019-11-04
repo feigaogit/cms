@@ -100,6 +100,9 @@
                     </div>
                     <asp:Button class="btn btn-success m-l-10 btn-md" OnClick="Search_OnClick" ID="Search" Text="搜 索" runat="server" />
                 </div>
+                <div class="form-inline m-t-10 text-danger">
+                    注：数据来源于基础平台；用户同步存在延迟，添加用户后1分钟内更新；用户被锁定说明基础平台无此用户或用户无网站管理权限
+                </div>
             </div>
             <div class="panel panel-default m-t-20">
                 <div class="panel-body p-0">
