@@ -63,7 +63,7 @@ namespace SiteServer.BackgroundPages.Cms
                 RblOperation.Items.Add(new ListItem("转发到其他站点", EContentAddAfter.Contribute.ToString()));
             }
 
-            SuccessMessage(isTranslated ? "内容添加成功并已转发到指定站点，请选择后续操作。" : "内容添加成功，请选择后续操作。");
+            SuccessMessage(isTranslated ? "内容保存成功并已转发到指定站点，请选择后续操作。" : "内容保存成功，请选择后续操作。");
 
             PhSiteId.Visible = PhSubmit.Visible = false;
         }

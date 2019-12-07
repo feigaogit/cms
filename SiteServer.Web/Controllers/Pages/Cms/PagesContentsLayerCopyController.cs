@@ -106,6 +106,9 @@ namespace SiteServer.API.Controllers.Pages.Cms
                 var channels = new List<object>();
                 var channelIdList = request.AdminPermissionsImpl.GetChannelIdList(siteId,
                     ConfigManager.ChannelPermissions.ContentAdd);
+                ////投稿时获取数据修改为有浏览权限就可以正常跨站转发
+                //var channelIdList = request.AdminPermissionsImpl.GetChannelIdList(siteId,
+                //    ConfigManager.ChannelPermissions.ContentView);
                 foreach (var permissionChannelId in channelIdList)
                 {
                     var permissionChannelInfo = ChannelManager.GetChannelInfo(siteId, permissionChannelId);

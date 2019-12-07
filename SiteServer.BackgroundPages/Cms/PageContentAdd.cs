@@ -389,6 +389,9 @@ namespace SiteServer.BackgroundPages.Cms
 
                     redirectUrl = ReturnUrl;
 
+                    redirectUrl = PageContentAddAfter.GetRedirectUrl(SiteId, _channelInfo.Id, contentInfo.Id,
+                        ReturnUrl);
+
                     //更新引用该内容的信息
                     //如果不是异步自动保存，那么需要将引用此内容的content修改
                     //var sourceContentIdList = new List<int>
