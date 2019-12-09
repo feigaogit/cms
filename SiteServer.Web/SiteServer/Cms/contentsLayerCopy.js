@@ -27,7 +27,7 @@ var methods = {
       },
       function (err, res) {
         if (err || !res || !res.value) return;
-
+          
         $this.contents = res.value;
         $this.sites = res.sites;
         $this.channels = res.channels;

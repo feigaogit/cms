@@ -552,6 +552,7 @@
     <Content Include="SiteServer\Cms\contentsLayerAttributes.cshtml" />
     <Content Include="SiteServer\Cms\contentsLayerCheck.cshtml" />
     <Content Include="SiteServer\Cms\contentsLayerColumns.cshtml" />
+    <Content Include="SiteServer\Cms\contentsLayerTransmit.js" />
     <Content Include="SiteServer\Cms\contentsLayerCopy.cshtml" />
     <Content Include="SiteServer\Cms\contentsLayerCut.cshtml" />
     <Content Include="SiteServer\Cms\contentsLayerDelete.cshtml" />
@@ -602,6 +603,7 @@
     <Content Include="SiteFiles\assets\Styles\candy_buttons.css.1.0" />
     <Content Include="SiteFiles\assets\Styles\parts.css.1.1" />
     <Content Include="SiteFiles\assets\Styles\spaces.css.1.1" />
+    <Content Include="SiteServer\Cms\contentsLayerTransmit.cshtml" />
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1965,6 +1967,7 @@
     <Compile Include="Controllers\Home\HomeContentsLayerTaxisController.cs" />
     <Compile Include="Controllers\Home\HomeContentsLayerViewController.cs" />
     <Compile Include="Controllers\Home\HomeContentsLayerWordController.cs" />
+    <Compile Include="Controllers\Pages\Cms\PagesContentsLayerTransmitController.cs" />
     <Compile Include="Controllers\Pages\Cms\PagesContentsLayerCopyController.cs" />
     <Compile Include="Controllers\Pages\Cms\PagesContentsLayerCutController.cs" />
     <Compile Include="Controllers\Pages\Cms\PagesContentsLayerArrangeController.cs" />
