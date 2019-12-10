@@ -259,6 +259,8 @@ namespace SiteServer.CMS.Core
             contentInfo.IsChecked = targetSiteInfo.Additional.IsCrossSiteTransChecked;
             contentInfo.CheckedLevel = 0;
 
+            var targetChannelInfo = ChannelManager.GetChannelInfo(targetSiteInfo.Id, targetChannelId);
+
             //复制
             if (Equals(channelInfo.Additional.TransDoneType, ETranslateContentType.Copy))
             {
@@ -285,7 +287,7 @@ namespace SiteServer.CMS.Core
 
             if (!string.IsNullOrEmpty(targetTableName))
             {
-                DataProvider.ContentDao.Insert(targetTableName, targetSiteInfo, channelInfo, contentInfo);
+                DataProvider.ContentDao.Insert(targetTableName, targetSiteInfo, targetChannelInfo, contentInfo);
 
                 #region 复制资源
                 //资源：图片，文件，视频
