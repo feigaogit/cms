@@ -52,6 +52,11 @@ namespace SiteServer.BackgroundPages.Cms
             if (_channelId < 0) _channelId = -_channelId;
 
             var channelInfo = ChannelManager.GetChannelInfo(SiteId, _channelId);
+            if (channelInfo == null)
+            {
+                throw new Exception("栏目已被删除");
+            }
+
             _contentId = AuthRequest.GetQueryInt("id");
             _returnUrl = StringUtils.ValueFromUrl(AuthRequest.GetQueryString("returnUrl"));
 
