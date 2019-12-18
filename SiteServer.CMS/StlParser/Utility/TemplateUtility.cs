@@ -27,6 +27,12 @@ namespace SiteServer.CMS.StlParser.Utility
             if (contentItemInfo == null) return string.Empty;
             var contentInfo = ContentManager.GetContentInfo(pageInfo.SiteInfo, contentItemInfo.ChannelId,
                 contentItemInfo.ContentId);
+             
+            //修复内容找不到时报错 by feigao 2019-12-18
+            if (contentInfo.Id == 0)
+            {
+                return string.Empty;
+            }
 
             var contextInfo = contextInfoRef.Clone();
             contextInfo.ContextType = contextType;
