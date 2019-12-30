@@ -74,7 +74,7 @@ namespace SiteServer.CMS.DataCache.Content
                     CountCache.Add(tableName, contentInfoToUpdate);
                 }
             }
-            
+
             dict[contentInfoToUpdate.Id] = contentInfoToUpdate;
 
             StlContentCache.ClearCache();
@@ -83,7 +83,7 @@ namespace SiteServer.CMS.DataCache.Content
         public static List<ContentColumn> GetContentColumns(SiteInfo siteInfo, ChannelInfo channelInfo, bool includeAll)
         {
             var columns = new List<ContentColumn>();
-            
+
             var attributesOfDisplay = TranslateUtils.StringCollectionToStringCollection(channelInfo.Additional.ContentAttributesOfDisplay);
             var pluginIds = PluginContentManager.GetContentPluginIds(channelInfo);
             var pluginColumns = PluginContentManager.GetContentColumns(pluginIds);
@@ -171,6 +171,12 @@ namespace SiteServer.CMS.DataCache.Content
 
             foreach (var column in columns)
             {
+                //添加审核人的名称转换
+                //if (column.AttributeName == "CheckUserName")
+                //{
+                //    column.IsCalculate = true;
+                //}
+
                 if (!column.IsCalculate) continue;
 
                 if (StringUtils.EqualsIgnoreCase(column.AttributeName, ContentAttribute.Sequence))
@@ -233,6 +239,19 @@ namespace SiteServer.CMS.DataCache.Content
                     }
                     retVal.Set(ContentAttribute.LastEditUserName, value);
                 }
+                //else if (StringUtils.EqualsIgnoreCase(column.AttributeName, ContentAttribute.CheckUserName))
+                //{
+                //    var value = string.Empty;
+                //    if (!string.IsNullOrEmpty(contentInfo.))
+                //    {
+                //        var adminInfo = AdminManager.GetAdminInfoByUserName(contentInfo.CheckUserName);
+                //        if (adminInfo != null)
+                //        {
+                //            value = string.IsNullOrEmpty(adminInfo.DisplayName) ? adminInfo.UserName : adminInfo.DisplayName;
+                //        }
+                //    }
+                //    retVal.Set(ContentAttribute.CheckUserName, value);
+                //}
             }
 
             if (pluginColumns != null)
@@ -281,7 +300,7 @@ namespace SiteServer.CMS.DataCache.Content
             {
                 return false;
             }
-            
+
             return channelInfo.Additional.IsContentCreatable && string.IsNullOrEmpty(contentInfo.LinkUrl) && contentInfo.IsChecked && contentInfo.SourceId != SourceManager.Preview && contentInfo.ChannelId > 0;
         }
     }

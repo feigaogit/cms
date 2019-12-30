@@ -75,14 +75,19 @@ namespace SiteServer.API.SiteServer
                     var accessToken = request.AdminLogin(adminInfo.UserName, false);
                     var expiresAt = DateTime.Now.AddDays(Constants.AccessTokenExpireDays);
 
-                    Response.Redirect("pageInitialization.aspx");
+
+                    var isRedirect = Request.QueryString["isRedirect"];
+                    if (isRedirect != "false")
+                    {
+                        Response.Redirect("pageInitialization.aspx");
+                    }
                 }
                 catch (Exception e)
                 {
                     Response.Write("身份认证失败!" + e.Message);
                 }
 
-                Response.Write(sid);
+                //Response.Write(sid);
             }
         }
 
